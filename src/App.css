@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  width: min(100%, 1096px);
+  font-family : "Noto Sans";
+}
+
+button:focus,
+.slider:focus {
+  outline: 2px solid hsl(3, 86%, 64%);
+}
+
+button {
+  cursor: pointer;
+}
+.toggle{
+  position : relative;
+}
+
+.toggle input{
+  position : absolute;
+  opacity : 0;
+  width : 0;
+  height : 0;
+}
+.slider{
+  position : relative;
+  display : block;
+  cursor : pointer;
+  background-color : hsl(0, 0%, 78%);
+  transition : 0.4s;
+  width : 30px;
+  height : 18px;
+}
+
+.slider:before{
+  content : '';
+  position : absolute;
+  height : 14px;
+  width : 14px;
+  background-color : hsl(200, 60%, 99%);
+  transition : 0.4s;
+  top : 2px;
+  left : 2px;
+}
+
+input:checked + .slider{
+  background-color : hsl(3, 77%, 44%);
+}
+
+input:checked + .slider:before{
+  transform : translateX(12px)
+}
+
+.slider.round{
+  border-radius : 8px;
+}
+
+.slider.round::before{
+  border-radius: 8px;
+}
