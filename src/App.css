@@ -6,6 +6,7 @@
 body {
   width: min(100%, 1096px);
   font-family : "Noto Sans";
+  min-height : 100vh;
 }
 
 button:focus,
