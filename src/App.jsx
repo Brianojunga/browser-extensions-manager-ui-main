@@ -10,7 +10,7 @@ function App() {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    fetch("./data.json")
+    fetch("./data.json", {mode : 'cors',})
       .then((response) => response.json())
       .then((response) => setExtension(response));
   }, []);
