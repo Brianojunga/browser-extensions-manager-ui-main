@@ -16,7 +16,7 @@ function Header() {
   return (
     <div className="flex justify-between items-center bg-[hsl(200,60%,99%)] p-2 rounded-xl shadow dark:bg-[hsl(225,23%,24%)]">
       <div>
-        <img className="" src={bgDark ? "./src/assets/images/logo2.svg" : "./src/assets/images/logo.svg" } alt="logo" />
+        <img className="" src={bgDark ? "./images/logo2.svg" : "./images/logo.svg" } alt="logo" />
       </div>
       <button
         aria-label={
@@ -28,8 +28,8 @@ function Header() {
         <img
           src={
             bgDark
-              ? "./src/assets/images/icon-sun.svg"
-              : "./src/assets/images/icon-moon.svg"
+              ? "./images/icon-sun.svg"
+              : "./images/icon-moon.svg"
           }
           alt={bgDark ? "sunny svg" : "moon svg"}
         />
